@@ -1,0 +1,77 @@
+databaseChangeLog:
+  - changeSet:
+      id: 01
+      author: szohrab
+      changes:
+        - createTable:
+            tableName: cars
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: cars_id
+                    nullable: false
+              - column:
+                  name: brand
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: model
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: vin_number
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: build_date
+                  type: VARCHAR(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: color
+                  type: VARCHAR(30)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: engine_name
+                  type: VARCHAR(30)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: engine_power
+                  type: VARCHAR(30)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: price
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: kilometrage
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: gearbox
+                  type: VARCHAR(30)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: fuel_type
+                  type: VARCHAR(30)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: addition_info
+                  type: VARCHAR(250)
+                  constraints:
+                    nullable: false

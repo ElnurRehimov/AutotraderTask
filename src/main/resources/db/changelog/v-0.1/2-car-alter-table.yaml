@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: 02
+      author: szohrab
+      changes:
+        - addColumn:
+            tableName: cars
+            columns:
+              - column:
+                  name: seller_id
+                  type: bigint

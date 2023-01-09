@@ -1,0 +1,32 @@
+databaseChangeLog:
+  - changeSet:
+      id: 03
+      author: szohrab
+      changes:
+        - createTable:
+            tableName: sellers
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: sellers_id
+                    nullable: false
+
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: city
+                  type: VARCHAR(255)
+
+              - column:
+                  name: phone_number
+                  type: bigint
+                  constraints:
+                    nullable: false
